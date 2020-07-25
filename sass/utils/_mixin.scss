@@ -1,0 +1,31 @@
+@mixin bordered($bordered: transparent) {
+  border-radius: 4px;
+  border: 1px solid $bordered;
+}
+
+@mixin dynamic-color(
+  $colorMain: $plain-button-color,
+  $colorBg: $accent-text-color
+) {
+  color: $colorMain;
+  background-color: $colorBg;
+}
+
+@mixin centerFlex($type: flex, $position: center) {
+  display: $type;
+  justify-content: center;
+  align-items: $position;
+}
+
+@mixin mixinTransition($args...) {
+  @if (length($args) == 0) {
+    transition: all $duration $timing-function $timeDelay;
+  } @else {
+    $options: null;
+    @for $i from 0 to length($args) {
+      $options: $options,
+        #{nth($args, $i + 1)} $duration $timing-function $timeDelay;
+    }
+    transition: $options;
+  }
+}

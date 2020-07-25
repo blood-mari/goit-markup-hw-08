@@ -1,0 +1,26 @@
+.social-link {
+  @include centerFlex(inline-flex);
+  background-color: $background-social;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  @include mixinTransition();
+
+  &--background {
+    &:hover,
+    &:focus {
+      background-color: $accent-text-color;
+    }
+  }
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: $border-color;
+  @include mixinTransition();
+}
+
+.footer__icon-social {
+  fill: $dark-theme-text-color;
+}

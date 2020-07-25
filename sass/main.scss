@@ -1,0 +1,27 @@
+// Utils
+@import "./utils/variables";
+@import "./utils/mixin";
+
+// Base style
+@import "./utils/baseStyle";
+@import "./utils/placeholder";
+
+// Header+logo
+@import "./components/pageHeader";
+@import "./components/logo";
+
+// Hero section
+@import "./components/hero";
+@import "./components/modal";
+
+// sections
+@import "./components/featuresSection";
+@import "./components/we-doSection";
+@import "./components/teamSection";
+
+// Social links
+@import "./components/socialLinks";
+@import "./components/clientsSection";
+
+// Footer
+@import "./components/footer";

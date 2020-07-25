@@ -1,0 +1,253 @@
+.backdrop {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $overlay-modal-color;
+  opacity: 1;
+  @include mixinTransition();
+
+  &.is-hidden {
+    opacity: 0;
+    overflow: hidden;
+    transform: scale(1.5);
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  top: 60%;
+  left: 53%;
+
+  transform: translate(-55%, -51%) scale(1);
+  @include mixinTransition(transform);
+
+  color: $paragraph-text-color;
+}
+
+.close-modal {
+  @include centerFlex;
+
+  position: absolute;
+  top: 1%;
+  right: 1%;
+
+  width: 30px;
+  height: 30px;
+  background-color: $dark-theme-text-color;
+  border: 1px solid $modal-elements-border;
+  border-radius: 50%;
+
+  &:hover .icon-close {
+    fill: $accent-text-color;
+    cursor: pointer;
+  }
+}
+
+.icon-close {
+  fill: $main-text-color;
+}
+
+.form {
+  &-action {
+    display: flex;
+    flex-direction: column;
+    min-width: 528px;
+
+    background-color: $main-background-color;
+    padding: 40px;
+  }
+
+  &-title {
+    display: block;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $main-text-color;
+
+    margin-bottom: 30px;
+  }
+
+  &-field {
+    position: relative;
+  }
+
+  &-label {
+    display: block;
+
+    position: absolute;
+    top: 30%;
+    left: 42px;
+
+    transform: translateY(-50%);
+    @include mixinTransition();
+
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+  }
+
+  &-input {
+    border: 1px solid $modal-elements-border;
+    border-radius: 4px;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    margin-bottom: 28px;
+
+    &:focus {
+      border-color: $accent-text-color;
+      outline: none;
+    }
+  }
+
+  &-textarea {
+    resize: none;
+    padding: 12px 16px;
+
+    border: 1px solid $modal-elements-border;
+    border-radius: 4px;
+    width: 100%;
+
+    &:focus {
+      border-color: $accent-text-color;
+      outline: none;
+    }
+  }
+}
+
+.field-textarea {
+  position: relative;
+}
+
+.form-label {
+  .form-textarea:focus + & {
+    transform: translate(0, -40px);
+    color: $accent-text-color;
+    font-size: 12px;
+  }
+
+  .form-input:focus + & {
+    transform: translate(-26px, -40px);
+    color: $accent-text-color;
+    font-size: 12px;
+  }
+
+  .form-textarea:not(:placeholder-shown) & {
+    transform: translate(0, -40px);
+    color: $accent-text-color;
+    font-size: 12px;
+  }
+
+  .form-input:not(:placeholder-shown) & {
+    transform: translate(-26px, -40px);
+    color: var(--accent-text-color);
+    font-size: 12px;
+  }
+
+  .field-textarea & {
+    position: absolute;
+    top: 21px;
+    left: 16px;
+
+    transform: translateY(-50%);
+    @include mixinTransition();
+  }
+}
+
+.icon-label {
+  position: absolute;
+  top: 30%;
+  left: 16px;
+
+  fill: $main-text-color;
+  transform: translateY(-50%);
+  @include mixinTransition();
+
+  .form-input:focus ~ &,
+  .form-input:not(:placeholder-shown) ~ & {
+    fill: $accent-text-color;
+  }
+}
+
+.checkbox {
+  @extend %visually--hidden;
+
+  &-form {
+    @include centerFlex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    input {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.check-icon {
+  .checkbox-form & {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $main-text-color;
+    border-radius: 4px;
+
+    margin-right: 8px;
+  }
+
+  .checkbox:checked + & {
+    background-color: $accent-text-color;
+    background-image: url(../images/icon-check.svg);
+    border-color: transparent;
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.link.check-up {
+  color: $accent-text-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    font-weight: 500;
+  }
+}
+
+.submit {
+  &-form {
+    text-align: center;
+  }
+
+  &-button {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    padding: 10px 55px;
+
+    line-height: 1.87;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    @include dynamic-color($dark-theme-text-color);
+    box-shadow: $main-shadow;
+    @include bordered;
+
+    transform: scale(1, 1);
+    @include mixinTransition();
+
+    &:hover,
+    &:focus {
+      background-color: $hover-button-color;
+      transform: scale(1.1, 1.1);
+    }
+  }
+}

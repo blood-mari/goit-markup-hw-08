@@ -1,0 +1,44 @@
+.section-we-do {
+  padding-top: 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc((100% - 30px * 2) / 3);
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__subtitle {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+
+    opacity: 0.3;
+    @include mixinTransition();
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    color: $dark-theme-text-color;
+    background-color: $transparent-background;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 82px;
+    padding-right: 82px;
+
+    .section-we-do__item:hover & {
+      opacity: 1;
+    }
+  }
+}

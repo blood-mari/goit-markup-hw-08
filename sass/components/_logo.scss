@@ -1,0 +1,31 @@
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  font-family: $font-logo;
+  color: $accent-text-color;
+  line-height: 1.19;
+}
+
+.header__logo--tail {
+  color: $main-text-color;
+  @include mixinTransition();
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+
+  &--tail {
+    color: $dark-theme-text-color;
+    @include mixinTransition();
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  min-height: 80px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+
+  border: 1px solid #e5e5e5;
+  background-color: $main-background-color;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__logo {
+    margin-right: 85px;
+  }
+
+  &__nav,
+  &__contacts-list {
+    display: flex;
+  }
+
+  &__nav li + li {
+    margin-left: 50px;
+  }
+
+  &__contacts-list {
+    margin-left: auto;
+    & li + li {
+      margin-left: 30px;
+    }
+  }
+
+  &__contacts-icon {
+    margin-right: 10px;
+
+    fill: $border-color;
+    stroke: $border-color;
+    stroke-width: 1px;
+    @include mixinTransition();
+  }
+
+  &__contacts-link {
+    color: $paragraph-text-color;
+
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include mixinTransition();
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+
+    &:hover .page-header__contacts-icon,
+    &:focus .page-header__contacts-icon {
+      fill: $accent-text-color;
+      stroke: $accent-text-color;
+      stroke-width: 2px;
+    }
+  }
+}
+
+.nav__link {
+  position: relative;
+
+  color: $main-text-color;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include mixinTransition();
+
+  .page-header__nav &--current {
+    color: $accent-text-color;
+  }
+
+  &--current::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-color: $accent-text-color;
+    border-radius: 2px 2px;
+    background-color: $accent-text-color;
+  }
+}

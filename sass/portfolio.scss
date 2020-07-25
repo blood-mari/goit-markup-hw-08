@@ -1,0 +1,21 @@
+// Utils
+@import "./utils/variables";
+@import "./utils/mixin";
+
+// Base style
+@import "./utils/baseStyle";
+@import "./utils/placeholder";
+
+// Header+logo
+@import "./components/pageHeader";
+@import "./components/logo";
+
+// Portfolio-card
+@import "./components/portfolio-card-section";
+
+// Social links
+@import "./components/socialLinks";
+@import "./components/clientsSection";
+
+// Footer
+@import "./components/footer";
