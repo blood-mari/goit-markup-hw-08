@@ -1,123 +1,123 @@
-footer {
-  @include dynamic-color($dark-theme-text-color, $background-footer-color);
+// footer {
+//   @include dynamic-color($dark-theme-text-color, $background-footer-color);
 
-  a {
-    display: block;
-  }
-}
+//   a {
+//     display: block;
+//   }
+// }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+// .footer-container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: baseline;
 
-  padding-top: 45px;
-  padding-bottom: 28px;
-}
+//   padding-top: 45px;
+//   padding-bottom: 28px;
+// }
 
-.address__item {
-  font-style: normal;
-  line-height: 1.71;
+// .address__item {
+//   font-style: normal;
+//   line-height: 1.71;
 
-  &:not(:last-child) {
-    margin-bottom: 9px;
-  }
-}
+//   &:not(:last-child) {
+//     margin-bottom: 9px;
+//   }
+// }
 
-.footer__mail,
-.footer__tel {
-  color: $footer-contacts-color;
-  @include mixinTransition();
+// .footer__mail,
+// .footer__tel {
+//   color: $footer-contacts-color;
+//   @include mixinTransition();
 
-  &:hover,
-  &:focus {
-    color: $accent-text-color;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     color: $accent-text-color;
+//   }
+// }
 
-.join-us__title {
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1.14;
-  display: block;
-}
+// .join-us__title {
+//   font-weight: 700;
+//   text-transform: uppercase;
+//   line-height: 1.14;
+//   display: block;
+// }
 
-.footer {
-  &__social-list {
-    @include centerFlex(inline-flex);
-    margin-top: 20px;
+// .footer {
+//   &__social-list {
+//     @include centerFlex(inline-flex);
+//     margin-top: 20px;
 
-    li:not(:last-child) {
-      margin-right: 10px;
-    }
-  }
-}
+//     li:not(:last-child) {
+//       margin-right: 10px;
+//     }
+//   }
+// }
 
-.subscribe {
-  &__title {
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.14;
-    display: block;
-  }
+// .subscribe {
+//   &__title {
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     line-height: 1.14;
+//     display: block;
+//   }
 
-  &__input {
-    @include dynamic-color($footer-contacts-color, $background-footer-color);
+//   &__input {
+//     @include dynamic-color($footer-contacts-color, $background-footer-color);
 
-    width: 358px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+//     width: 358px;
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+//     border-radius: 4px;
 
-    padding: 15px 16px 15px;
-    margin-top: 20px;
-    margin-right: 12px;
+//     padding: 15px 16px 15px;
+//     margin-top: 20px;
+//     margin-right: 12px;
 
-    @extend %input-style;
-  }
+//     @extend %input-style;
+//   }
 
-  &__icon-send {
-    fill: $dark-theme-text-color;
-    margin-left: 10px;
-  }
-}
+//   &__icon-send {
+//     fill: $dark-theme-text-color;
+//     margin-left: 10px;
+//   }
+// }
 
-.subscribe__button {
-  @include dynamic-color($dark-theme-text-color);
-  @include bordered;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  line-height: 1.88;
+// .subscribe__button {
+//   @include dynamic-color($dark-theme-text-color);
+//   @include bordered;
+//   font-size: 16px;
+//   font-weight: 700;
+//   letter-spacing: 0.06em;
+//   line-height: 1.88;
 
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 29px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  min-width: 200px;
+//   display: inline-flex;
+//   align-items: center;
+//   padding: 10px 29px;
+//   margin-top: 20px;
+//   margin-bottom: 20px;
+//   min-width: 200px;
 
-  transform: scale(1, 1);
-  @include mixinTransition();
+//   transform: scale(1, 1);
+//   @include mixinTransition();
 
-  &:hover,
-  &:focus {
-    background-color: $hover-button-color;
-    transform: scale(1.1, 1.1);
-  }
-}
+//   &:hover,
+//   &:focus {
+//     background-color: $hover-button-color;
+//     transform: scale(1.1, 1.1);
+//   }
+// }
 
-.subscribe__input::placeholder {
-  color: $footer-contacts-color;
-  @extend %input-style;
+// .subscribe__input::placeholder {
+//   color: $footer-contacts-color;
+//   @extend %input-style;
 
-  &:focus {
-    border: 2px solid $accent-text-color;
-  }
-}
+//   &:focus {
+//     border: 2px solid $accent-text-color;
+//   }
+// }
 
-%input-style {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-}
+// %input-style {
+//   font-size: 16px;
+//   line-height: 1.25;
+//   letter-spacing: 0.03em;
+// }

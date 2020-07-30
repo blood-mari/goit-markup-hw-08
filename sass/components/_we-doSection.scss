@@ -1,4 +1,7 @@
 .section-we-do {
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
   padding-top: 0;
 
   &__list {
@@ -34,8 +37,8 @@
 
     padding-top: 27px;
     padding-bottom: 27px;
-    padding-left: 82px;
-    padding-right: 82px;
+    padding-left: 50px;
+    padding-right: 50px;
 
     .section-we-do__item:hover & {
       opacity: 1;

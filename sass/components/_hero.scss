@@ -5,35 +5,39 @@
 .hero {
   text-align: center;
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   &__title {
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.36;
     letter-spacing: 0.06em;
-    width: 50%;
+    line-height: 1.62em;
+
     text-align: center;
     text-transform: uppercase;
     color: $dark-theme-text-color;
-
     margin-right: auto;
     margin-left: auto;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
 
 .hero-overlay {
-  height: 600px;
+  height: 400px;
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  background-image: linear-gradient(
-      $transparent-background,
-      $transparent-background
-    ),
-    url(../images/header-img.jpg);
-  background-color: $paragraph-text-color;
+  @include webp-background($img: "hero-mobile-480-400");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -65,3 +69,21 @@
   background-color: $hover-button-color;
   transform: scale(1.1, 1.1);
 }
+
+// .hero-overlay {
+//   height: 600px;
+//   max-width: 1600px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   background-image: linear-gradient(
+//       $transparent-background,
+//       $transparent-background
+//     ),
+//     url(../images/header-img.jpg);
+//   background-color: $paragraph-text-color;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+//

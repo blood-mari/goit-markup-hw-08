@@ -1,9 +1,14 @@
 .logo {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   font-family: $font-logo;
   color: $accent-text-color;
-  line-height: 1.19;
+  line-height: 1.16;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header__logo--tail {
@@ -16,16 +21,16 @@
   }
 }
 
-.footer__logo {
-  margin-bottom: 20px;
+// .footer__logo {
+//   margin-bottom: 20px;
 
-  &--tail {
-    color: $dark-theme-text-color;
-    @include mixinTransition();
+//   &--tail {
+//     color: $dark-theme-text-color;
+//     @include mixinTransition();
 
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
-    }
-  }
-}
+//     &:hover,
+//     &:focus {
+//       color: $accent-text-color;
+//     }
+//   }
+// }

@@ -1,42 +1,85 @@
 .page-header {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #ececec;
+  background-color: $main-background-color;
+  width: 100%;
+
   position: sticky;
   top: 0;
-  z-index: 1;
-  min-height: 80px;
-  width: 100%;
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-  font-weight: 500;
+  z-index: 10;
 
-  border: 1px solid #e5e5e5;
-  background-color: $main-background-color;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+
+    & .is-hidden {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-height: 80px;
+    line-height: 1.15;
+  }
 
   &__container {
     display: flex;
     align-items: center;
+    padding: 10px 0;
 
-    padding-top: 0;
-    padding-bottom: 0;
+    @media screen and (min-width: $tablet) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__logo {
-    margin-right: 85px;
+    @media screen and (min-width: $desktop) {
+      margin-right: 85px;
+    }
   }
 
-  &__nav,
+  &__nav {
+    @media screen and (max-width: 767px) {
+      padding: 60px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    li + li {
+      @media screen and (max-width: 767px) {
+        margin-top: 40px;
+      }
+      @media screen and (min-width: $tablet) {
+        margin-left: 50px;
+      }
+    }
+  }
+
   &__contacts-list {
-    display: flex;
-  }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 60px;
+      li + li {
+        margin-top: 16px;
+      }
+    }
 
-  &__nav li + li {
-    margin-left: 50px;
-  }
+    @media screen and (min-width: $tablet) {
+    }
 
-  &__contacts-list {
-    margin-left: auto;
-    & li + li {
-      margin-left: 30px;
+    @media screen and (min-width: $desktop) {
+      margin-left: auto;
+
+      li + li {
+        margin-left: 30px;
+      }
     }
   }
 
@@ -52,11 +95,14 @@
   &__contacts-link {
     color: $paragraph-text-color;
 
-    display: flex;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    @include centerFlex;
+
     @include mixinTransition();
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 
     &:hover,
     &:focus {
@@ -73,17 +119,28 @@
 }
 
 .nav__link {
-  position: relative;
-
   color: $main-text-color;
+  display: inline-block;
 
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   @include mixinTransition();
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   .page-header__nav &--current {
     color: $accent-text-color;
+    position: relative;
+
+    @media screen and (max-width: $tablet) {
+      padding: 12px 0;
+    }
   }
 
   &--current::after {
@@ -98,5 +155,76 @@
     border-color: $accent-text-color;
     border-radius: 2px 2px;
     background-color: $accent-text-color;
+  }
+}
+
+.drop-down-button {
+  @media screen and (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+
+    &:hover,
+    &:focus {
+      fill: $accent-text-color;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.drop-down-icon .open {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.is-hidden {
+  @media screen and (max-width: 767px) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    & .drop-down-menu {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+
+    & + .drop-down-button {
+      & .open {
+        display: block;
+      }
+      & .close {
+        display: none;
+      }
+    }
+  }
+}
+
+.drop-down-menu {
+  @media screen and (max-width: $tablet) {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #ececec;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.08),
+      0 4px 8px rgba(0, 0, 0, 0.04);
+
+    flex-direction: column;
+    @include centerFlex;
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.2s linear, opacity 0.2s linear;
   }
 }

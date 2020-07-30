@@ -24,41 +24,72 @@
           ><span>Web</span>
           <span class="header__logo--tail link">Studio</span></a
         >
-        <nav>
-          <ul class="page-header__nav">
-            <li>
-              <a href="./index.html" class="link nav__link--current nav__link"
-                >Студия</a
-              >
-            </li>
-            <li>
-              <a href="./portfolio.html" class="link nav__link">Портфолио</a>
-            </li>
-            <li>
-              <a href="" class="link nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="is-hidden" data-drop>
+          <div id="menu-container" class="drop-down-menu">
+            <nav>
+              <ul class="page-header__nav">
+                <li>
+                  <a
+                    href="./index.html"
+                    class="link nav__link--current nav__link"
+                    >Студия</a
+                  >
+                </li>
+                <li>
+                  <a href="./portfolio.html" class="link nav__link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="link nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
 
-        <ul class="page-header__contacts-list">
-          <li>
-            <a
-              href="mailto:info@devstudio.com"
-              class="page-header__contacts-link"
-              ><svg width="16" height="11" class="page-header__contacts-icon">
-                <use href="./images/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a href="tel:+380961111111" class="page-header__contacts-link"
-              ><svg width="11" height="15" class="page-header__contacts-icon">
-                <use href="./images/sprite.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+            <ul class="page-header__contacts-list">
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="page-header__contacts-link"
+                  ><svg
+                    width="16"
+                    height="11"
+                    class="page-header__contacts-icon"
+                  >
+                    <use href="./images/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+380961111111" class="page-header__contacts-link"
+                  ><svg
+                    width="11"
+                    height="15"
+                    class="page-header__contacts-icon"
+                  >
+                    <use href="./images/sprite.svg#icon-smartphone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="drop-down-button" aria-expanded="false" data-drop-button>
+          <svg
+            width="24"
+            height="16"
+            aria-controls="menu-container"
+            aria-label="Переключатель мобильного меню"
+            class="drop-down-icon"
+          >
+            <use class="open" href="./images/sprite.svg#icon-menu_mobile"></use>
+            <use
+              class="close"
+              href="./images/sprite.svg#icon-close_mobile"
+            ></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -66,7 +97,10 @@
       <!-- Герой-->
       <div class="hero-overlay">
         <section class="hero">
-          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <h1 class="hero__title">
+            Эффективные решения <br />
+            для вашего бизнеса
+          </h1>
           <button class="hero__button--primary" data-modal-open>
             Заказать услугу
           </button>
@@ -80,7 +114,7 @@
           <ul class="features__list">
             <li class="features__item">
               <div class="features__layout">
-                <svg class="features__icon">
+                <svg width="70" height="70" class="features__icon">
                   <use href="./images/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -92,7 +126,7 @@
             </li>
             <li class="features__item">
               <div class="features__layout">
-                <svg class="features__icon">
+                <svg width="70" height="70" class="features__icon">
                   <use href="./images/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -104,7 +138,7 @@
             </li>
             <li class="features__item">
               <div class="features__layout">
-                <svg class="features__icon">
+                <svg width="70" height="70" class="features__icon">
                   <use href="./images/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -116,7 +150,7 @@
             </li>
             <li class="features__item">
               <div class="features__layout">
-                <svg class="features__icon">
+                <svg width="70" height="70" class="features__icon">
                   <use href="./images/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -172,79 +206,71 @@
         <div class="container">
           <h2 class="section-team__title title">Наша команда</h2>
           <ul class="section-team__list">
-            <li class="section-team__item item-flip">
-              <div class="card">
-                <div class="face-card">
-                  <img
-                    class="face-card__image"
-                    src="./images/team-1.jpg"
-                    alt="Николай Кучеренко"
-                    width="270"
-                  />
-                </div>
-                <div class="card__item-info">
-                  <h3 class="card__item-name">Николай Кучеренко</h3>
-                  <p class="card__item-profession">Product Designer</p>
-                  <ul class="card__social-list">
-                    <li>
-                      <a
-                        href=""
-                        aria-label="Instagram link"
-                        class="card__social-link social-link"
-                        ><svg class="icon-social">
-                          <use
-                            href="./images/sprite.svg#icon-Instagram"
-                          ></use></svg
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href=""
-                        aria-label="Twitter link"
-                        class="card__social-link social-link"
-                        ><svg class="icon-social">
-                          <use
-                            href="./images/sprite.svg#icon-twitter"
-                          ></use></svg
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href=""
-                        aria-label="Facebook link"
-                        class="card__social-link social-link"
-                        ><svg class="icon-social">
-                          <use
-                            href="./images/sprite.svg#icon-facebook"
-                          ></use></svg
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href=""
-                        aria-label="LinkedIn link"
-                        class="card__social-link social-link"
-                        ><svg class="icon-social">
-                          <use
-                            href="./images/sprite.svg#icon-linkedIn"
-                          ></use></svg
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
+            <li class="section-team__item">
+              <img
+                class="face-card__image"
+                src="./images/team-1.jpg"
+                alt="Николай Кучеренко"
+                width="270"
+              />
+              <div class="card__item-info">
+                <h3 class="card__item-name">Николай Кучеренко</h3>
+                <p class="card__item-profession">Product Designer</p>
+                <ul class="card__social-list">
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Instagram link"
+                      class="card__social-link social-link"
+                      ><svg width="20" height="20" class="icon-social">
+                        <use
+                          href="./images/sprite.svg#icon-Instagram"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Twitter link"
+                      class="card__social-link social-link"
+                      ><svg width="20" height="20" class="icon-social">
+                        <use href="./images/sprite.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Facebook link"
+                      class="card__social-link social-link"
+                      ><svg width="20" height="20" class="icon-social">
+                        <use
+                          href="./images/sprite.svg#icon-facebook"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="LinkedIn link"
+                      class="card__social-link social-link"
+                      ><svg width="20" height="20" class="icon-social">
+                        <use
+                          href="./images/sprite.svg#icon-linkedIn"
+                        ></use></svg
+                    ></a>
+                  </li>
+                </ul>
               </div>
             </li>
 
-            <li class="section-team__item item-flip">
+            <li class="section-team__item">
               <div class="card">
-                <div class="face-card">
-                  <img
-                    class="face-card__image"
-                    src="./images/team-2.jpg"
-                    alt="Ольга Иванова"
-                    width="270"
-                  />
-                </div>
+                <img
+                  class="face-card__image"
+                  src="./images/team-2.jpg"
+                  alt="Ольга Иванова"
+                  width="270"
+                />
 
                 <div class="card__item-info">
                   <h3 class="card__item-name">Ольга Иванова</h3>
@@ -255,7 +281,7 @@
                         href=""
                         aria-label="Instagram link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-Instagram"
                           ></use></svg
@@ -266,7 +292,7 @@
                         href=""
                         aria-label="Twitter link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-twitter"
                           ></use></svg
@@ -277,7 +303,7 @@
                         href=""
                         aria-label="Facebook link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-facebook"
                           ></use></svg
@@ -288,7 +314,7 @@
                         href=""
                         aria-label="LinkedIn link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-linkedIn"
                           ></use></svg
@@ -299,16 +325,15 @@
               </div>
             </li>
 
-            <li class="section-team__item item-flip">
+            <li class="section-team__item">
               <div class="card">
-                <div class="face-card">
-                  <img
-                    class="face-card__image"
-                    src="./images/team-3.jpg"
-                    alt="Андрей Шевченко"
-                    width="270"
-                  />
-                </div>
+                <img
+                  class="face-card__image"
+                  src="./images/team-3.jpg"
+                  alt="Андрей Шевченко"
+                  width="270"
+                />
+
                 <div class="card__item-info">
                   <h3 class="card__item-name">Андрей Шевченко</h3>
                   <p class="card__item-profession">Marketing</p>
@@ -318,7 +343,7 @@
                         href=""
                         aria-label="Instagram link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-Instagram"
                           ></use></svg
@@ -329,7 +354,7 @@
                         href=""
                         aria-label="Twitter link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-twitter"
                           ></use></svg
@@ -340,7 +365,7 @@
                         href=""
                         aria-label="Facebook link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-facebook"
                           ></use></svg
@@ -351,7 +376,7 @@
                         href=""
                         aria-label="LinkedIn link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-linkedIn"
                           ></use></svg
@@ -361,16 +386,16 @@
                 </div>
               </div>
             </li>
-            <li class="section-team__item item-flip">
+
+            <li class="section-team__item">
               <div class="card">
-                <div class="face-card">
-                  <img
-                    class="face-card__image"
-                    src="./images/team-4.jpg"
-                    alt="Иван Николаев"
-                    width="270"
-                  />
-                </div>
+                <img
+                  class="face-card__image"
+                  src="./images/team-4.jpg"
+                  alt="Иван Николаев"
+                  width="270"
+                />
+
                 <div class="card__item-info">
                   <h3 class="card__item-name">Иван Николаев</h3>
                   <p class="card__item-profession">UI Designer</p>
@@ -380,7 +405,7 @@
                         href=""
                         aria-label="Instagram link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-Instagram"
                           ></use></svg
@@ -391,7 +416,7 @@
                         href=""
                         aria-label="Twitter link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-twitter"
                           ></use></svg
@@ -402,7 +427,7 @@
                         href=""
                         aria-label="Facebook link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-facebook"
                           ></use></svg
@@ -413,7 +438,7 @@
                         href=""
                         aria-label="LinkedIn link"
                         class="card__social-link social-link"
-                        ><svg class="icon-social">
+                        ><svg width="20" height="20" class="icon-social">
                           <use
                             href="./images/sprite.svg#icon-linkedIn"
                           ></use></svg
@@ -478,7 +503,7 @@
                   <use href="./images/sprite.svg#icon-logo-5"></use></svg
               ></a>
             </li>
-            <li class="clients-item">
+            <li class="clients__item">
               <a href="./" class="clients__link"
                 ><svg
                   aria-label="логотип компании-6"
@@ -525,7 +550,11 @@
                 href=""
                 aria-label="Instagram link"
                 class="social-link social-link--background"
-                ><svg class="icon-social footer__icon-social">
+                ><svg
+                  width="20"
+                  height="20"
+                  class="icon-social footer__icon-social"
+                >
                   <use href="./images/sprite.svg#icon-Instagram"></use></svg
               ></a>
             </li>
@@ -534,7 +563,11 @@
                 href=""
                 aria-label="Twitter link"
                 class="social-link social-link--background"
-                ><svg class="icon-social footer__icon-social">
+                ><svg
+                  width="20"
+                  height="20"
+                  class="icon-social footer__icon-social"
+                >
                   <use href="./images/sprite.svg#icon-twitter"></use></svg
               ></a>
             </li>
@@ -543,7 +576,11 @@
                 href=""
                 aria-label="Facebook link"
                 class="social-link social-link--background"
-                ><svg class="icon-social footer__icon-social">
+                ><svg
+                  width="20"
+                  height="20"
+                  class="icon-social footer__icon-social"
+                >
                   <use href="./images/sprite.svg#icon-facebook"></use></svg
               ></a>
             </li>
@@ -552,7 +589,11 @@
                 href=""
                 aria-label="LinkedIn link"
                 class="social-link social-link--background"
-                ><svg class="icon-social footer__icon-social">
+                ><svg
+                  width="20"
+                  height="20"
+                  class="icon-social footer__icon-social"
+                >
                   <use href="./images/sprite.svg#icon-linkedIn"></use></svg
               ></a>
             </li>
@@ -667,6 +708,7 @@
       </div>
     </div>
 
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <!-- <script>
       const { height: pageHeaderHeight } = document
