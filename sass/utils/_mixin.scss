@@ -11,9 +11,9 @@
   background-color: $colorBg;
 }
 
-@mixin centerFlex($type: flex, $position: center) {
+@mixin centerFlex($type: flex, $position: center, $justify: center) {
   display: $type;
-  justify-content: center;
+  justify-content: $justify;
   align-items: $position;
 }
 

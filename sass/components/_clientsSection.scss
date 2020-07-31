@@ -1,26 +1,37 @@
 .clients {
   &__list {
     @include centerFlex();
-
-    @media screen and (max-width: 1199px) {
-      flex-wrap: wrap;
-    }
-
-    @media screen and (min-width: $desktop) {
-      justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (min-width: 480px) {
+      margin: -15px;
     }
   }
 
   &__item {
-    @media screen and (max-width: 767px) {
-      max-width: calc((100% - 4 * 15px) / 2);
-      &:nth-child(2n + 2) {
-        margin-left: 30px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 210px;
+    @media screen and (max-width: 479px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
       }
+    }
 
-      &:nth-child(n + 3) {
-        margin-top: 30px;
-      }
+    @media screen and (min-width: 480px) {
+      width: calc((100% - 4 * 15px) / 2);
+
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 6 * 15px) / 3);
+
+      max-width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 12 * 15px) / 6);
+      max-width: 170px;
     }
   }
 
@@ -40,10 +51,6 @@
     transform: scale(1, 1);
     @include mixinTransition();
 
-    @media screen and (min-width: $desktop) {
-      width: 170px;
-    }
-
     &:hover,
     &:focus,
     &:hover .clients__logo,
@@ -61,8 +68,6 @@
 
   &__logo {
     fill: $border-color;
-    max-width: 210px;
-    max-height: 90px;
     @include mixinTransition();
   }
 }
