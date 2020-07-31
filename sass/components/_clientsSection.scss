@@ -25,13 +25,15 @@
   }
 
   &__link {
+    display: block;
     border-color: $border-color;
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;
     fill: $border-color;
 
-    max-width: 210px;
+    height: 90px;
+    width: 100%;
 
     @include centerFlex;
 

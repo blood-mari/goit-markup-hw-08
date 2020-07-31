@@ -765,12 +765,14 @@ body {
 }
 
 .clients__link {
+  display: block;
   border-color: #afb1b8;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
   fill: #afb1b8;
-  max-width: 210px;
+  height: 90px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
