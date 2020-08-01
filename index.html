@@ -113,7 +113,7 @@
 
       <!-- Преимущества -->
       <section class="section">
-        <div class="container">
+        <div class="container container-wrap">
           <h2 class="visually-hidden">Особенности компании</h2>
           <ul class="features__list">
             <li class="features__item">
@@ -207,16 +207,70 @@
 
       <!-- Сотрудники компании -->
       <section class="section section-team">
-        <div class="container">
+        <div class="container container-wrap">
           <h2 class="section-team__title title">Наша команда</h2>
           <ul class="section-team__list">
             <li class="section-team__item">
-              <img
-                class="face-card__image"
-                src="./images/team-1.jpg"
-                alt="Николай Кучеренко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-1_1200.webp    270w,
+                    ./images/team/team-1_1200@2x.webp 540w
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-1_1200.jpg    270w,
+                    ./images/team/team-1_1200@2x.jpg 540w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/team-1_768.webp    354w,
+                    ./images/team/team-1_768@2x.webp 708w
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-1_768.jpg    354w,
+                    ./images/team/team-1_768@2x.jpg 708w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/team-1_480.webp    450w,
+                    ./images/team/team-1_480@2x.webp 900w
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/team-1_480.jpg    450w,
+                    ./images/team/team-1_480@2x.jpg 900w
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="face-card__image"
+                  src="./images/team/team-1_480.jpg"
+                  alt="Фото Николая Кучеренко"
+                />
+              </picture>
               <div class="card__item-info">
                 <h3 class="card__item-name">Николай Кучеренко</h3>
                 <p class="card__item-profession">Product Designer</p>
@@ -269,12 +323,66 @@
 
             <li class="section-team__item">
               <div class="card">
-                <img
-                  class="face-card__image"
-                  src="./images/team-2.jpg"
-                  alt="Ольга Иванова"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-2_1200.webp    270w,
+                      ./images/team/team-2_1200@2x.webp 540w
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-2_1200.jpg    270w,
+                      ./images/team/team-2_1200@2x.jpg 540w
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-2_768.webp    354w,
+                      ./images/team/team-2_768@2x.webp 708w
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-2_768.jpg    354w,
+                      ./images/team/team-2_768@2x.jpg 708w
+                    "
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-2_480.webp    450w,
+                      ./images/team/team-2_480@2x.webp 900w
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-2_480.jpg    450w,
+                      ./images/team/team-2_480@2x.jpg 900w
+                    "
+                    media="(max-width: 767px)"
+                  />
+
+                  <img
+                    class="face-card__image"
+                    src="./images/team/team-2_480.jpg"
+                    alt="Фото Ольга Иванова"
+                  />
+                </picture>
 
                 <div class="card__item-info">
                   <h3 class="card__item-name">Ольга Иванова</h3>
@@ -331,12 +439,66 @@
 
             <li class="section-team__item">
               <div class="card">
-                <img
-                  class="face-card__image"
-                  src="./images/team-3.jpg"
-                  alt="Андрей Шевченко"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-3_1200.webp    270w,
+                      ./images/team/team-3_1200@2x.webp 540w
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-3_1200.jpg    270w,
+                      ./images/team/team-3_1200@2x.jpg 540w
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-3_768.webp    354w,
+                      ./images/team/team-3_768@2x.webp 708w
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-3_768.jpg    354w,
+                      ./images/team/team-3_768@2x.jpg 708w
+                    "
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-3_480.webp    450w,
+                      ./images/team/team-3_480@2x.webp 900w
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-3_480.jpg    450w,
+                      ./images/team/team-3_480@2x.jpg 900w
+                    "
+                    media="(max-width: 767px)"
+                  />
+
+                  <img
+                    class="face-card__image"
+                    src="./images/team/team-3_480.jpg"
+                    alt="Фото Андрей Шевченко"
+                  />
+                </picture>
 
                 <div class="card__item-info">
                   <h3 class="card__item-name">Андрей Шевченко</h3>
@@ -393,12 +555,66 @@
 
             <li class="section-team__item">
               <div class="card">
-                <img
-                  class="face-card__image"
-                  src="./images/team-4.jpg"
-                  alt="Иван Николаев"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/team-4_1200.webp    270w,
+                      ./images/team/team-4_1200@2x.webp 540w
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-4_1200.jpg    270w,
+                      ./images/team/team-4_1200@2x.jpg 540w
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-4_768.webp    354w,
+                      ./images/team/team-4_768@2x.webp 708w
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/team-4_768.jpg    354w,
+                      ./images/team/team-4_768@2x.jpg 708w
+                    "
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-4_480.webp    450w,
+                      ./images/team/team-4_480@2x.webp 900w
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/team/team-4_480.jpg    450w,
+                      ./images/team/team-4_480@2x.jpg 900w
+                    "
+                    media="(max-width: 767px)"
+                  />
+
+                  <img
+                    class="face-card__image"
+                    src="./images/team/team-4_480.jpg"
+                    alt="Фото Иван Николаев"
+                  />
+                </picture>
 
                 <div class="card__item-info">
                   <h3 class="card__item-name">Иван Николаев</h3>
@@ -458,7 +674,7 @@
 
       <!-- Клиенты -->
       <section class="section">
-        <div class="container">
+        <div class="container container-wrap">
           <h2 class="title">Постоянные клиенты</h2>
           <ul class="clients__list">
             <li class="clients__item">

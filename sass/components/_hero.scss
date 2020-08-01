@@ -70,20 +70,73 @@
   transform: scale(1.1, 1.1);
 }
 
-// .hero-overlay {
-//   height: 600px;
-//   max-width: 1600px;
-//   margin-right: auto;
-//   margin-left: auto;
-//   background-image: linear-gradient(
-//       $transparent-background,
-//       $transparent-background
-//     ),
-//     url(../images/header-img.jpg);
-//   background-color: $paragraph-text-color;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-// }
+.hero-overlay {
+  max-height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      $transparent-background,
+      $transparent-background
+    ),
+    url(..//images/hero-background/hero-mobile-480-400.jpg);
 
-//
+  background-color: $paragraph-text-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 480px) {
+    background-image: linear-gradient(
+        $transparent-background,
+        $transparent-background
+      ),
+      url(..//images/hero-background/hero-mobile-480-400.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $transparent-background,
+          $transparent-background
+        ),
+        url(..//images/hero-background/hero-mobile-480-400@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(
+        $transparent-background,
+        $transparent-background
+      ),
+      url(..//images/hero-background/hero-tablet-768-400.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $transparent-background,
+          $transparent-background
+        ),
+        url(..//images/hero-background/hero-tablet-768-400@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        $transparent-background,
+        $transparent-background
+      ),
+      url(..//images/hero-background/hero-desctop-1600-600.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $transparent-background,
+          $transparent-background
+        ),
+        url(..//images/hero-background/hero-desctop-1600-600@2x.jpg);
+    }
+  }
+}

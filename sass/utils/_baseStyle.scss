@@ -13,6 +13,7 @@ div {
 }
 
 img {
+  display: block;
   margin: 0;
   padding: 0;
   height: auto;
@@ -79,8 +80,10 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    max-width: 768px;
+  &-wrap {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      max-width: 1000px;
+    }
   }
 }
 
