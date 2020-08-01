@@ -1,123 +1,180 @@
-// footer {
-//   @include dynamic-color($dark-theme-text-color, $background-footer-color);
+footer {
+  @include dynamic-color($dark-theme-text-color, $background-footer-color);
 
-//   a {
-//     display: block;
-//   }
-// }
+  a {
+    display: block;
+  }
+}
 
-// .footer-container {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: baseline;
+.footer-container {
+  @media screen and (max-width: $mobile) {
+    padding-left: -15px;
+    padding-right: -15px;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
-//   padding-top: 45px;
-//   padding-bottom: 28px;
-// }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 768px;
+  }
 
-// .address__item {
-//   font-style: normal;
-//   line-height: 1.71;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 
-//   &:not(:last-child) {
-//     margin-bottom: 9px;
-//   }
-// }
+  @media screen and (min-width: $desktop) {
+    padding-top: 45px;
+    padding-bottom: 28px;
+    justify-content: space-between;
+  }
+}
 
-// .footer__mail,
-// .footer__tel {
-//   color: $footer-contacts-color;
-//   @include mixinTransition();
+.address__item {
+  font-style: normal;
+  line-height: 1.71;
 
-//   &:hover,
-//   &:focus {
-//     color: $accent-text-color;
-//   }
-// }
+  &:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
+  }
+}
 
-// .join-us__title {
-//   font-weight: 700;
-//   text-transform: uppercase;
-//   line-height: 1.14;
-//   display: block;
-// }
+.footer__mail,
+.footer__tel {
+  color: $footer-contacts-color;
+  @include mixinTransition();
 
-// .footer {
-//   &__social-list {
-//     @include centerFlex(inline-flex);
-//     margin-top: 20px;
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
 
-//     li:not(:last-child) {
-//       margin-right: 10px;
-//     }
-//   }
-// }
+.join-us {
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.14;
+    display: block;
+  }
 
-// .subscribe {
-//   &__title {
-//     font-weight: 700;
-//     text-transform: uppercase;
-//     line-height: 1.14;
-//     display: block;
-//   }
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 
-//   &__input {
-//     @include dynamic-color($footer-contacts-color, $background-footer-color);
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-left: 165px;
+  }
+}
 
-//     width: 358px;
-//     border: 1px solid rgba(255, 255, 255, 0.3);
-//     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-//     border-radius: 4px;
+.footer {
+  &__social-list {
+    @include centerFlex(inline-flex);
+    margin-top: 20px;
 
-//     padding: 15px 16px 15px;
-//     margin-top: 20px;
-//     margin-right: 12px;
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
 
-//     @extend %input-style;
-//   }
+.subscribe {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-//   &__icon-send {
-//     fill: $dark-theme-text-color;
-//     margin-left: 10px;
-//   }
-// }
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.14;
+    display: block;
+  }
 
-// .subscribe__button {
-//   @include dynamic-color($dark-theme-text-color);
-//   @include bordered;
-//   font-size: 16px;
-//   font-weight: 700;
-//   letter-spacing: 0.06em;
-//   line-height: 1.88;
+  &__input {
+    @include dynamic-color($footer-contacts-color, $background-footer-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 
-//   display: inline-flex;
-//   align-items: center;
-//   padding: 10px 29px;
-//   margin-top: 20px;
-//   margin-bottom: 20px;
-//   min-width: 200px;
+    @extend %input-style;
 
-//   transform: scale(1, 1);
-//   @include mixinTransition();
+    margin-top: 20px;
+    padding: 15px 16px 15px;
 
-//   &:hover,
-//   &:focus {
-//     background-color: $hover-button-color;
-//     transform: scale(1.1, 1.1);
-//   }
-// }
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+      //   width: calc(100% - 20px);
+    }
 
-// .subscribe__input::placeholder {
-//   color: $footer-contacts-color;
-//   @extend %input-style;
+    @media screen and (min-width: $desktop) {
+      width: 358px;
 
-//   &:focus {
-//     border: 2px solid $accent-text-color;
-//   }
-// }
+      margin-right: 12px;
+    }
+  }
 
-// %input-style {
-//   font-size: 16px;
-//   line-height: 1.25;
-//   letter-spacing: 0.03em;
-// }
+  &__icon-send {
+    fill: $dark-theme-text-color;
+    margin-left: 10px;
+  }
+}
+
+.subscribe__button {
+  @include dynamic-color($dark-theme-text-color);
+  @include bordered;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.88;
+
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 29px;
+  margin-top: 20px;
+
+  min-width: 200px;
+
+  transform: scale(1, 1);
+  @include mixinTransition();
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $hover-button-color;
+
+    @media screen and (min-width: $desktop) {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
+
+.subscribe__input::placeholder {
+  color: $footer-contacts-color;
+  @extend %input-style;
+
+  &:focus {
+    border: 2px solid $accent-text-color;
+  }
+}
+
+%input-style {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}

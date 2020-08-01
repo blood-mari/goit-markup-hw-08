@@ -1,253 +1,274 @@
-// .backdrop {
-//   position: fixed;
-//   z-index: 2;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   margin-right: auto;
-//   margin-left: auto;
-//   background-color: $overlay-modal-color;
-//   opacity: 1;
-//   @include mixinTransition();
+.backdrop {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $overlay-modal-color;
+  opacity: 1;
+  @include mixinTransition();
 
-//   &.is-hidden {
-//     opacity: 0;
-//     overflow: hidden;
-//     transform: scale(1.5);
-//     pointer-events: none;
-//   }
-// }
+  &.is-hidden {
+    opacity: 0;
+    overflow: hidden;
+    transform: scale(1.5);
+    pointer-events: none;
+  }
+}
 
-// .modal {
-//   position: absolute;
-//   width: 528px;
-//   top: 60%;
-//   left: 53%;
+.modal {
+  position: absolute;
 
-//   transform: translate(-55%, -51%) scale(1);
-//   @include mixinTransition(transform);
+  max-width: calc(100% - 30px);
+  max-height: calc(100% - 30px);
+  top: 60%;
+  left: 53%;
 
-//   color: $paragraph-text-color;
-// }
+  overflow: auto;
 
-// .close-modal {
-//   @include centerFlex;
+  transform: translate(-55%, -51%) scale(1);
+  @include mixinTransition(transform);
 
-//   position: absolute;
-//   top: 1%;
-//   right: 1%;
+  color: $paragraph-text-color;
+}
 
-//   width: 30px;
-//   height: 30px;
-//   background-color: $dark-theme-text-color;
-//   border: 1px solid $modal-elements-border;
-//   border-radius: 50%;
+.close-modal {
+  @include centerFlex;
 
-//   &:hover .icon-close {
-//     fill: $accent-text-color;
-//     cursor: pointer;
-//   }
-// }
+  position: absolute;
+  top: 1%;
+  right: 1%;
 
-// .icon-close {
-//   fill: $main-text-color;
-// }
+  width: 30px;
+  height: 30px;
+  background-color: $dark-theme-text-color;
+  border: 1px solid $modal-elements-border;
+  border-radius: 50%;
 
-// .form {
-//   &-action {
-//     display: flex;
-//     flex-direction: column;
-//     min-width: 528px;
+  &:hover .icon-close {
+    fill: $accent-text-color;
+    cursor: pointer;
+  }
+}
 
-//     background-color: $main-background-color;
-//     padding: 40px;
-//   }
+.icon-close {
+  fill: $main-text-color;
+}
 
-//   &-title {
-//     display: block;
-//     font-size: 20px;
-//     line-height: 1.15;
-//     text-align: center;
-//     color: $main-text-color;
+.form {
+  &-action {
+    display: flex;
+    flex-direction: column;
 
-//     margin-bottom: 30px;
-//   }
+    padding: 40px;
 
-//   &-field {
-//     position: relative;
-//   }
+    background-color: $main-background-color;
+  }
 
-//   &-label {
-//     display: block;
+  &-title {
+    display: block;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: $main-text-color;
 
-//     position: absolute;
-//     top: 30%;
-//     left: 42px;
+    margin-bottom: 30px;
 
-//     transform: translateY(-50%);
-//     @include mixinTransition();
+    @media screen and (min-width: $desktop) {
+      line-height: 1.15;
+    }
+  }
 
-//     line-height: 1.33;
-//     letter-spacing: 0.01em;
-//   }
+  &-field {
+    position: relative;
+  }
 
-//   &-input {
-//     border: 1px solid $modal-elements-border;
-//     border-radius: 4px;
-//     width: 100%;
-//     padding-top: 11px;
-//     padding-bottom: 11px;
-//     padding-left: 42px;
-//     margin-bottom: 28px;
+  &-label {
+    display: block;
 
-//     &:focus {
-//       border-color: $accent-text-color;
-//       outline: none;
-//     }
-//   }
+    position: absolute;
+    top: 30%;
+    left: 42px;
 
-//   &-textarea {
-//     resize: none;
-//     padding: 12px 16px;
+    transform: translateY(-50%);
+    @include mixinTransition();
 
-//     border: 1px solid $modal-elements-border;
-//     border-radius: 4px;
-//     width: 100%;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+  }
 
-//     &:focus {
-//       border-color: $accent-text-color;
-//       outline: none;
-//     }
-//   }
-// }
+  &-input {
+    border: 1px solid $modal-elements-border;
+    border-radius: 4px;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    margin-bottom: 28px;
 
-// .field-textarea {
-//   position: relative;
-// }
+    &:focus {
+      border-color: $accent-text-color;
+      outline: none;
+    }
+  }
 
-// .form-label {
-//   .form-textarea:focus + & {
-//     transform: translate(0, -40px);
-//     color: $accent-text-color;
-//     font-size: 12px;
-//   }
+  &-textarea {
+    resize: none;
+    padding: 12px 16px;
 
-//   .form-input:focus + & {
-//     transform: translate(-26px, -40px);
-//     color: $accent-text-color;
-//     font-size: 12px;
-//   }
+    border: 1px solid $modal-elements-border;
+    border-radius: 4px;
+    width: 100%;
 
-//   .form-textarea:not(:placeholder-shown) & {
-//     transform: translate(0, -40px);
-//     color: $accent-text-color;
-//     font-size: 12px;
-//   }
+    &:focus {
+      border-color: $accent-text-color;
+      outline: none;
+    }
+  }
+}
 
-//   .form-input:not(:placeholder-shown) & {
-//     transform: translate(-26px, -40px);
-//     color: var(--accent-text-color);
-//     font-size: 12px;
-//   }
+.field-textarea {
+  position: relative;
+}
 
-//   .field-textarea & {
-//     position: absolute;
-//     top: 21px;
-//     left: 16px;
+.form-label {
+  letter-spacing: 0.01em;
 
-//     transform: translateY(-50%);
-//     @include mixinTransition();
-//   }
-// }
+  .form-textarea:focus + & {
+    transform: translate(0, -40px);
+    color: $accent-text-color;
+    font-size: 12px;
+  }
 
-// .icon-label {
-//   position: absolute;
-//   top: 30%;
-//   left: 16px;
+  .form-input:focus + & {
+    transform: translate(-26px, -40px);
+    color: $accent-text-color;
+    font-size: 12px;
+  }
 
-//   fill: $main-text-color;
-//   transform: translateY(-50%);
-//   @include mixinTransition();
+  .form-textarea:not(:placeholder-shown) & {
+    transform: translate(0, -40px);
+    color: $accent-text-color;
+    font-size: 12px;
+  }
 
-//   .form-input:focus ~ &,
-//   .form-input:not(:placeholder-shown) ~ & {
-//     fill: $accent-text-color;
-//   }
-// }
+  .form-input:not(:placeholder-shown) & {
+    transform: translate(-26px, -40px);
+    color: var(--accent-text-color);
+    font-size: 12px;
+  }
 
-// .checkbox {
-//   @extend %visually--hidden;
+  .field-textarea & {
+    position: absolute;
+    top: 21px;
+    left: 16px;
 
-//   &-form {
-//     @include centerFlex;
-//     margin-top: 20px;
-//     margin-bottom: 30px;
+    transform: translateY(-50%);
+    @include mixinTransition();
+  }
 
-//     input {
-//       margin-right: 10px;
-//       cursor: pointer;
-//     }
-//   }
-// }
+  @media screen and (min-width: $desktop) {
+    letter-spacing: 0.03em;
+  }
+}
 
-// .check-icon {
-//   .checkbox-form & {
-//     display: inline-block;
-//     width: 16px;
-//     height: 15px;
-//     border: 2px solid $main-text-color;
-//     border-radius: 4px;
+.icon-label {
+  position: absolute;
+  top: 30%;
+  left: 16px;
 
-//     margin-right: 8px;
-//   }
+  fill: $main-text-color;
+  transform: translateY(-50%);
+  @include mixinTransition();
 
-//   .checkbox:checked + & {
-//     background-color: $accent-text-color;
-//     background-image: url(../images/icon-check.svg);
-//     border-color: transparent;
-//     background-size: contain;
-//     background-origin: border-box;
-//   }
-// }
+  .form-input:focus ~ &,
+  .form-input:not(:placeholder-shown) ~ & {
+    fill: $accent-text-color;
+  }
+}
 
-// .link.check-up {
-//   color: $accent-text-color;
-//   text-decoration: underline;
+.checkbox {
+  @extend %visually--hidden;
 
-//   &:hover,
-//   &:focus {
-//     cursor: pointer;
-//     font-weight: 500;
-//   }
-// }
+  &-form {
+    font-size: 12px;
+    line-height: 1.17;
+    @include centerFlex;
+    margin-top: 20px;
+    margin-bottom: 30px;
 
-// .submit {
-//   &-form {
-//     text-align: center;
-//   }
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
 
-//   &-button {
-//     display: flex;
-//     margin-right: auto;
-//     margin-left: auto;
-//     width: 200px;
-//     padding: 10px 55px;
+    input {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
 
-//     line-height: 1.87;
-//     font-weight: 700;
-//     letter-spacing: 0.06em;
-//     @include dynamic-color($dark-theme-text-color);
-//     box-shadow: $main-shadow;
-//     @include bordered;
+.check-icon {
+  .checkbox-form & {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $main-text-color;
+    border-radius: 4px;
 
-//     transform: scale(1, 1);
-//     @include mixinTransition();
+    margin-right: 8px;
+  }
 
-//     &:hover,
-//     &:focus {
-//       background-color: $hover-button-color;
-//       transform: scale(1.1, 1.1);
-//     }
-//   }
-// }
+  .checkbox:checked + & {
+    background-color: $accent-text-color;
+    background-image: url(../images/icon-check.svg);
+    border-color: transparent;
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.link.check-up {
+  color: $accent-text-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    font-weight: 500;
+  }
+}
+
+.submit {
+  &-form {
+    text-align: center;
+  }
+
+  &-button {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    padding: 10px 55px;
+
+    line-height: 1.87;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    @include dynamic-color($dark-theme-text-color);
+    box-shadow: $main-shadow;
+    @include bordered;
+
+    transform: scale(1, 1);
+    @include mixinTransition();
+
+    &:hover,
+    &:focus {
+      background-color: $hover-button-color;
+      transform: scale(1.1, 1.1);
+    }
+  }
+}

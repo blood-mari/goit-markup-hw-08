@@ -21,16 +21,16 @@
   }
 }
 
-// .footer__logo {
-//   margin-bottom: 20px;
+.footer__logo {
+  margin-bottom: 20px;
 
-//   &--tail {
-//     color: $dark-theme-text-color;
-//     @include mixinTransition();
+  &--tail {
+    color: $dark-theme-text-color;
+    @include mixinTransition();
 
-//     &:hover,
-//     &:focus {
-//       color: $accent-text-color;
-//     }
-//   }
-// }
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+}

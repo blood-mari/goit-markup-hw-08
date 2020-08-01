@@ -11,6 +11,7 @@
 
   &__item {
     width: calc((100% - 30px * 2) / 3);
+
     position: relative;
 
     &:hover {
@@ -20,7 +21,7 @@
 
   &__subtitle {
     position: absolute;
-    bottom: 3px;
+    bottom: 1px;
     left: 0;
     width: 100%;
 

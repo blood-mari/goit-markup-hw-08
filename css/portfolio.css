@@ -466,6 +466,20 @@ body {
   color: #2196f3;
 }
 
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__logo--tail {
+  color: #ffffff;
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
+}
+
+.footer__logo--tail:hover, .footer__logo--tail:focus {
+  color: #2196f3;
+}
+
 .social-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -514,7 +528,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .clients__list {
-    margin: -15px;
+    margin: -6px;
   }
 }
 
@@ -540,7 +554,7 @@ body {
 @media screen and (min-width: 768px) {
   .clients__item {
     width: calc((100% - 6 * 15px) / 3);
-    max-width: 226px;
+    max-width: 230px;
   }
 }
 
@@ -596,5 +610,268 @@ body {
   fill: #afb1b8;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
+}
+
+footer {
+  color: #ffffff;
+  background-color: #2f303a;
+}
+
+footer a {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-container {
+    padding-left: -15px;
+    padding-right: -15px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-container {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    padding-top: 45px;
+    padding-bottom: 28px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.address__item {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+@media screen and (max-width: 1199px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer__mail,
+.footer__tel {
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
+}
+
+.footer__mail:hover, .footer__mail:focus,
+.footer__tel:hover,
+.footer__tel:focus {
+  color: #2196f3;
+}
+
+.join-us__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.14;
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .join-us {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .join-us {
+    margin-left: 165px;
+  }
+}
+
+.footer__social-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.footer__social-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .subscribe {
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.subscribe__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.14;
+  display: block;
+}
+
+.subscribe__input {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-top: 20px;
+  padding: 15px 16px 15px;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe__input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+
+.subscribe__icon-send {
+  fill: #ffffff;
+  margin-left: 10px;
+}
+
+.subscribe__button {
+  color: #ffffff;
+  background-color: #2196f3;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.88;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 29px;
+  margin-top: 20px;
+  min-width: 200px;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 1ms;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__button {
+    margin-bottom: 20px;
+  }
+}
+
+.subscribe__button:hover, .subscribe__button:focus {
+  background-color: #188ce8;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__button:hover, .subscribe__button:focus {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+}
+
+.subscribe__input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe__input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe__input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe__input::-webkit-input-placeholder:focus {
+  border: 2px solid #2196f3;
+}
+
+.subscribe__input:-ms-input-placeholder:focus {
+  border: 2px solid #2196f3;
+}
+
+.subscribe__input::-ms-input-placeholder:focus {
+  border: 2px solid #2196f3;
+}
+
+.subscribe__input::placeholder:focus {
+  border: 2px solid #2196f3;
+}
+
+.subscribe__input, .subscribe__input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.subscribe__input, .subscribe__input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.subscribe__input, .subscribe__input::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.subscribe__input, .subscribe__input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 }
 /*# sourceMappingURL=portfolio.css.map */

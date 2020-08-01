@@ -174,31 +174,67 @@
           <h2 class="section-we-do__title title">Чем мы занимаемся</h2>
           <ul class="section-we-do__list">
             <li class="section-we-do__item">
-              <img
-                class="section-we-do__image"
-                src="./images/laptop.jpg"
-                alt="изображение ноутбук"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/we-do/laptop.webp     600w,
+                    ./images/we-do/laptop@2x.webp 1200w
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="section-we-do__image"
+                  srcset="
+                    ./images/we-do/laptop.jpg     600w,
+                    ./images/we-do/laptop@2x.jpg 1200w
+                  "
+                  src="./images/we-do/laptop@2x.jpg"
+                  alt="Изоброжение ноутбука"
+                />
+              </picture>
 
               <h3 class="section-we-do__subtitle">Десктопные приложения</h3>
             </li>
             <li class="section-we-do__item">
-              <img
-                class="section-we-do__image"
-                src="./images/mobile.jpg"
-                alt="изображение смартфон"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/we-do/mobile.webp     600w,
+                    ./images/we-do/mobile@2x.webp 1200w
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="section-we-do__image"
+                  srcset="
+                    ./images/we-do/mobile.jpg     600w,
+                    ./images/we-do/mobile@2x.jpg 1200w
+                  "
+                  src="./images/we-do/mobile@2x.jpg"
+                  alt="Изоброжение смартфона"
+                />
+              </picture>
               <h3 class="section-we-do__subtitle">Мобильные приложения</h3>
             </li>
             <li class="section-we-do__item">
-              <img
-                class="section-we-do__image"
-                src="./images/desctop.jpg"
-                alt="изображение компьютер"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/we-do/desctop.webp     600w,
+                    ./images/we-do/desctop@2x.webp 1200w
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="section-we-do__image"
+                  srcset="
+                    ./images/we-do/desctop.jpg     600w,
+                    ./images/we-do/desctop@2x.jpg 1200w
+                  "
+                  src="./images/we-do/desctop@2x.jpg"
+                  alt="Изоброжение монитора"
+                />
+              </picture>
               <h3 class="section-we-do__subtitle">Дизайнерские решения</h3>
             </li>
           </ul>
