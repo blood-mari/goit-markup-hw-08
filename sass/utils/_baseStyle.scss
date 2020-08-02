@@ -85,6 +85,12 @@ body {
       max-width: 1000px;
     }
   }
+
+  &-wrapping {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      max-width: 768px;
+    }
+  }
 }
 
 .button:focus,
