@@ -133,10 +133,37 @@
   line-height: 1.56;
   color: $dark-theme-text-color;
 
-  padding: 15px 15px;
+  padding: 20px 20px;
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 315px) {
+    font-size: 14px;
     line-height: 1.33;
+  }
+
+  @media screen and (min-width: 316px) and (max-width: 356px) {
+    font-size: 16px;
+    line-height: 1.18;
+  }
+
+  @media screen and (min-width: 357px) and (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 1.52;
+  }
+
+  @media screen and (min-width: 386px) and (max-width: 406px) {
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 407px) and (max-width: 446px) {
+    padding: 35px;
+  }
+
+  @media screen and (min-width: 407px) and (max-width: $mobile) {
+    padding: 50px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    padding: 60px;
   }
 
   @media screen and (min-width: $desktop) {

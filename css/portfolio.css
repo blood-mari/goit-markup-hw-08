@@ -646,12 +646,51 @@ body {
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
-  padding: 15px 15px;
+  padding: 20px 20px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 315px) {
   .examples-work__overlay-description {
+    font-size: 14px;
     line-height: 1.33;
+  }
+}
+
+@media screen and (min-width: 316px) and (max-width: 356px) {
+  .examples-work__overlay-description {
+    font-size: 16px;
+    line-height: 1.18;
+  }
+}
+
+@media screen and (min-width: 357px) and (max-width: 480px) {
+  .examples-work__overlay-description {
+    font-size: 16px;
+    line-height: 1.52;
+  }
+}
+
+@media screen and (min-width: 386px) and (max-width: 406px) {
+  .examples-work__overlay-description {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 407px) and (max-width: 446px) {
+  .examples-work__overlay-description {
+    padding: 35px;
+  }
+}
+
+@media screen and (min-width: 407px) and (max-width: 480px) {
+  .examples-work__overlay-description {
+    padding: 50px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .examples-work__overlay-description {
+    padding: 60px;
   }
 }
 

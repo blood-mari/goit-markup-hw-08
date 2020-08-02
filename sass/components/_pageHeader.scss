@@ -209,16 +209,16 @@
     visibility: hidden;
     pointer-events: none;
 
-    & .drop-down-menu {
+    .drop-down-menu {
       transform: scaleY(0);
       opacity: 0;
     }
 
-    & + .drop-down-button {
-      & .open {
+    + .drop-down-button {
+      .open {
         display: block;
       }
-      & .close {
+      .close {
         display: none;
       }
     }

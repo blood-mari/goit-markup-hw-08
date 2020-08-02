@@ -22,7 +22,7 @@
 .modal {
   position: absolute;
 
-  max-width: calc(100% - 30px);
+  max-width: calc(100% - 20px);
   max-height: calc(100% - 30px);
   top: 60%;
   left: 53%;
@@ -33,6 +33,14 @@
   @include mixinTransition(transform);
 
   color: $paragraph-text-color;
+
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 528px;
+  }
 }
 
 .close-modal {
@@ -64,6 +72,10 @@
     flex-direction: column;
 
     padding: 40px;
+
+    @media screen and (max-width: 767px) {
+      padding: 20px;
+    }
 
     background-color: $main-background-color;
   }
