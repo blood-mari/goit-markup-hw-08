@@ -9,7 +9,7 @@
   "jsxBracketSameLine": false,
   "arrowParens": "avoid",
   "proseWrap": "never",
-  // "htmlWhitespaceSensitivity": "ignore",
+  "htmlWhitespaceSensitivity": "ignore",
   "insertPragma": false,
   "jsxSingleQuote": false,
   "quoteProps": "as-needed",
