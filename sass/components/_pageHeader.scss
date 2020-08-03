@@ -21,7 +21,6 @@
       pointer-events: all;
 
       @media screen and (min-width: $desktop) {
-        margin-left: 10px;
 
         flex-basis: 70%;
       }
@@ -49,7 +48,7 @@
   &__logo {
     @media screen and (min-width: $tablet) {
       margin-right: 65px;
-      flex-shrink: 0;
+
     }
   }
 
